@@ -5,7 +5,7 @@ use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MatakuliahController;
 use App\Http\Controllers\SemesterController;
 use App\Http\Controllers\JadwalController;
-
+use App\Http\Controllers\KontrakMatakuliahController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,6 +39,7 @@ Route::delete('delete-matakuliah/{id}', [MatakuliahController::class, 'destroy']
 
 Route::resource('semester', SemesterController::class);
 Route::resource('jadwal', JadwalController::class);
+Route::resource('kontrakmatakuliah', KontrakMatakuliahController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

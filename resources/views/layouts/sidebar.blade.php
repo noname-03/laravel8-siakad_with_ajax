@@ -100,6 +100,7 @@
                     <a class="collapse-item" href="/matakuliah">Data Matakuliah</a>
                     <a class="collapse-item" href="{{ route('semester.index') }}">Data Semester</a>
                     <a class="collapse-item" href="{{ route('jadwal.index') }}">Data Jadwal</a>
+                    <a class="collapse-item" href="{{ route('kontrakmatakuliah.index') }}">Data Kontrak Kuliah</a>
                 </div>
             </div>
         </li>
