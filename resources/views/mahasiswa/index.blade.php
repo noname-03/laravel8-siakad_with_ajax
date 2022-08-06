@@ -137,10 +137,10 @@
                             <tr>
 
                                 <th>ID</th>
-                                <th>Name</th>
-                                <th>Course</th>
-                                <th>Email</th>
-                                <th>Phone</th>
+                                <th>Nama Mahasiswa</th>
+                                <th>Alamat</th>
+                                <th>No HP</th>
+                                <th>email</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
@@ -183,14 +183,14 @@
                         $('tbody').html("");
                         $.each(response.mahasiswa, function(key, item) {
                             $('tbody').append('<tr>\
-                                                        <td>' + item.id + '</td>\
-                                                        <td>' + item.nama_mahasiswa + '</td>\
-                                                        <td>' + item.alamat + '</td>\
-                                                        <td>' + item.no_tlp + '</td>\
-                                                        <td>' + item.email + '</td>\
-                                                        <td><button type="button" value="' + item.id + '" class="btn btn-primary editbtn btn-sm">Edit</button></td>\
-                                                        <td><button type="button" value="' + item.id + '" class="btn btn-danger deletebtn btn-sm">Delete</button></td>\
-                                                        \</tr>');
+                                                                    <td>' + item.id + '</td>\
+                                                                    <td>' + item.nama_mahasiswa + '</td>\
+                                                                    <td>' + item.alamat + '</td>\
+                                                                    <td>' + item.no_tlp + '</td>\
+                                                                    <td>' + item.email + '</td>\
+                                                                    <td><button type="button" value="' + item.id + '" class="btn btn-primary editbtn btn-sm">Edit</button></td>\
+                                                                    <td><button type="button" value="' + item.id + '" class="btn btn-danger deletebtn btn-sm">Delete</button></td>\
+                                                                    \</tr>');
                         });
                     }
                 });

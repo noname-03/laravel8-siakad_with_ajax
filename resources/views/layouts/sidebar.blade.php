@@ -66,46 +66,24 @@
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    @if (Auth::user()->role == 'admin')
-        <li class="nav-item active">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                aria-expanded="true" aria-controls="collapsePages">
-                <i class="fas fa-fw fa-folder"></i>
-                <span>Data</span>
-            </a>
-            <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"
-                data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Data:</h6>
-                    <a class="collapse-item" href="#">Data Kelas</a>
-                    <a class="collapse-item" href="#">Data Absensi</a>
-                    <a class="collapse-item" href="#">Data User</a>
-                    <a class="collapse-item" href="#">Data User</a>
-                </div>
+    <li class="nav-item active">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+            aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Data</span>
+        </a>
+        <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Data:</h6>
+                <a class="collapse-item" href="/mahasiswa">Data Mahasiswa</a>
+                <a class="collapse-item" href="/matakuliah">Data Matakuliah</a>
+                <a class="collapse-item" href="{{ route('semester.index') }}">Data Semester</a>
+                <a class="collapse-item" href="{{ route('jadwal.index') }}">Data Jadwal</a>
+                <a class="collapse-item" href="{{ route('kontrakmatakuliah.index') }}">Data Kontrak Kuliah</a>
+                <a class="collapse-item" href="{{ route('absen.index') }}">Data Absen</a>
             </div>
-        </li>
-    @else
-        <li class="nav-item active">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                aria-expanded="true" aria-controls="collapsePages">
-                <i class="fas fa-fw fa-folder"></i>
-                <span>Data</span>
-            </a>
-            <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"
-                data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Data:</h6>
-                    <a class="collapse-item" href="#">Data Kelas</a>
-                    <a class="collapse-item" href="/mahasiswa">Data Mahasiswa</a>
-                    <a class="collapse-item" href="/matakuliah">Data Matakuliah</a>
-                    <a class="collapse-item" href="{{ route('semester.index') }}">Data Semester</a>
-                    <a class="collapse-item" href="{{ route('jadwal.index') }}">Data Jadwal</a>
-                    <a class="collapse-item" href="{{ route('kontrakmatakuliah.index') }}">Data Kontrak Kuliah</a>
-                    <a class="collapse-item" href="{{ route('absen.index') }}">Data Absen</a>
-                </div>
-            </div>
-        </li>
-    @endif
+        </div>
+    </li>
 
     <!-- Nav Item - Charts -->
     {{-- <li class="nav-item">

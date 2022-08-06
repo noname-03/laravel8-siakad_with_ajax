@@ -3,7 +3,7 @@
     <div class="container-fluid">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Data Mahasiswa</h1>
+        <h1 class="h3 mb-2 text-gray-800">Data Matakuliah</h1>
         {{-- <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
             For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official
                 DataTables documentation</a>.</p> --}}
@@ -121,8 +121,8 @@
                             <tr>
 
                                 <th>ID</th>
-                                <th>Name</th>
-                                <th>Course</th>
+                                <th>Nama</th>
+                                <th>SKS</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
@@ -131,8 +131,8 @@
                             <tr>
 
                                 <th>No</th>
-                                <th>Nama Mahasiswa</th>
-                                <th>Alamat</th>
+                                <th>Nama</th>
+                                <th>SKS</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
@@ -163,12 +163,12 @@
                         $('tbody').html("");
                         $.each(response.matakuliah, function(key, item) {
                             $('tbody').append('<tr>\
-                                                                <td>' + item.id + '</td>\
-                                                                <td>' + item.nama_matakuliah + '</td>\
-                                                                <td>' + item.sks + '</td>\
-                                                                <td><button type="button" value="' + item.id + '" class="btn btn-primary editbtn btn-sm">Edit</button></td>\
-                                                                <td><button type="button" value="' + item.id + '" class="btn btn-danger deletebtn btn-sm">Delete</button></td>\
-                                                                \</tr>');
+                                                                        <td>' + item.id + '</td>\
+                                                                        <td>' + item.nama_matakuliah + '</td>\
+                                                                        <td>' + item.sks + '</td>\
+                                                                        <td><button type="button" value="' + item.id + '" class="btn btn-primary editbtn btn-sm">Edit</button></td>\
+                                                                        <td><button type="button" value="' + item.id + '" class="btn btn-danger deletebtn btn-sm">Delete</button></td>\
+                                                                        \</tr>');
                         });
                     }
                 });
