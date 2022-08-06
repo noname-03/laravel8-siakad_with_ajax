@@ -12,8 +12,7 @@
             </div>
             <div class="card-body">
                 {{-- {{ route('routeName', ['id' => 1]) }} --}}
-                <form action="{{ route('kontrakmatakuliah.update', ['kontrakmatakuliah' => $kontrakMatakuliah->id]) }}"
-                    method="POST">
+                <form action="{{ route('kontrakmatakuliah.update', $kontrakMatakuliah->id) }}" method="POST">
                     @csrf @method('PATCH')
 
                     <div class="form-row">

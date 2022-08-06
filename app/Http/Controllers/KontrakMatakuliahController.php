@@ -61,8 +61,10 @@ class KontrakMatakuliahController extends Controller
      * @param  \App\Models\KontrakMatakuliah  $kontrakMatakuliah
      * @return \Illuminate\Http\Response
      */
-    public function edit(KontrakMatakuliah $kontrakMatakuliah)
+    public function edit($id)
     {
+        $kontrakMatakuliah = KontrakMatakuliah::findOrFail($id);
+        // dd($kontrakMatakuliah);
         $semester = Semester::all();
         $mahasiswa = Mahasiswa::all();
         return view('kontrakmatakuliah.edit', compact('semester', 'mahasiswa', 'kontrakMatakuliah'));
@@ -75,8 +77,9 @@ class KontrakMatakuliahController extends Controller
      * @param  \App\Models\KontrakMatakuliah  $kontrakMatakuliah
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, KontrakMatakuliah $kontrakMatakuliah)
+    public function update(Request $request, $id)
     {
+        $kontrakMatakuliah = KontrakMatakuliah::findOrFail($id);
         $kontrakMatakuliah->update($request->all());
         return redirect()->route('kontrakmatakuliah.index');
     }
@@ -87,8 +90,10 @@ class KontrakMatakuliahController extends Controller
      * @param  \App\Models\KontrakMatakuliah  $kontrakMatakuliah
      * @return \Illuminate\Http\Response
      */
-    public function destroy(KontrakMatakuliah $kontrakMatakuliah)
+    public function destroy($id)
     {
+
+        $kontrakMatakuliah = KontrakMatakuliah::findOrFail($id);
         $kontrakMatakuliah->delete();
         return redirect()->route('kontrakmatakuliah.index');
     }
