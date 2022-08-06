@@ -4,16 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Jadwal;
+use App\Models\Matakuliah;
 
-class Matakuliah extends Model
+class Jadwal extends Model
 {
     use HasFactory;
-    protected $table = 'matakuliah';
+    protected $table = 'jadwal';
     protected $guarded = [];
 
-    public function Jadwal()
+    public function matakuliah()
     {
-        return $this->hasMany(Jadwal::class);
+        return $this->belongsTo(Matakuliah::class);
     }
 }

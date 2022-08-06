@@ -98,6 +98,8 @@
                     <a class="collapse-item" href="#">Data Kelas</a>
                     <a class="collapse-item" href="/mahasiswa">Data Mahasiswa</a>
                     <a class="collapse-item" href="/matakuliah">Data Matakuliah</a>
+                    <a class="collapse-item" href="{{ route('semester.index') }}">Data Semester</a>
+                    <a class="collapse-item" href="{{ route('jadwal.index') }}">Data Jadwal</a>
                 </div>
             </div>
         </li>

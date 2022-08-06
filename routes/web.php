@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MatakuliahController;
+use App\Http\Controllers\SemesterController;
+use App\Http\Controllers\JadwalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +36,9 @@ Route::get('fetch-matakuliah', [MatakuliahController::class, 'fetchmatakuliah'])
 Route::get('edit-matakuliah/{id}', [MatakuliahController::class, 'edit']);
 Route::put('update-matakuliah/{id}', [MatakuliahController::class, 'update']);
 Route::delete('delete-matakuliah/{id}', [MatakuliahController::class, 'destroy']);
+
+Route::resource('semester', SemesterController::class);
+Route::resource('jadwal', JadwalController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
